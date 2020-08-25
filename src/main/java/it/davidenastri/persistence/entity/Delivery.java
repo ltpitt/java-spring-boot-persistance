@@ -3,11 +3,9 @@ package it.davidenastri.persistence.entity;
 import org.hibernate.annotations.Nationalized;
 import org.hibernate.annotations.Type;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 public class Delivery {
@@ -18,14 +16,24 @@ public class Delivery {
 
     @Nationalized
     private String name;
-
     @Column(name = "address_full", length = 500)
     private String address;
-
-    private LocalDateTime deliveryTime; // includes both date and time - simpler than having two separate fields
-
+    private LocalDateTime deliveryTime;
     @Type(type = "yes_no")
     private Boolean completed;
+
+    //  Make sure to specify mappedBy.
+    //  Lazy fetch is optional but also often a good idea for collection attributes.
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "delivery")
+    private List<Plant> plants;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -59,4 +67,11 @@ public class Delivery {
         this.completed = completed;
     }
 
+    public List<Plant> getPlants() {
+        return plants;
+    }
+
+    public void setPlants(List<Plant> plants) {
+        this.plants = plants;
+    }
 }
