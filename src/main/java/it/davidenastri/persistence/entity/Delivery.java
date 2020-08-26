@@ -7,6 +7,8 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@NamedQuery(name = "Delivery.findByName",
+        query = "select d from Delivery d where d.name = :name")
 @Entity
 public class Delivery {
 
@@ -24,7 +26,8 @@ public class Delivery {
 
     //  Make sure to specify mappedBy.
     //  Lazy fetch is optional but also often a good idea for collection attributes.
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "delivery")
+    //  Added CascadeType.REMOVE to automatically clear any associated plants when removed
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "delivery", cascade = CascadeType.ALL)
     private List<Plant> plants;
 
     public Long getId() {
