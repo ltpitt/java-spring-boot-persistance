@@ -10,6 +10,8 @@ public interface PlantRepository extends JpaRepository<Plant, Long> {
 
     Boolean existsPlantByIdAndDeliveryCompleted(Long id, Boolean delivered);
 
+    Boolean deliveryCompleted(Long id);
+
     List<Plant> findByPriceLessThan(BigDecimal price);
 
 }
