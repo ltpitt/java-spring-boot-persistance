@@ -1,4 +1,4 @@
-# Java Sprint Boot Persistence
+# Java Spring Boot Persistence
 > A Spring Boot application used to extend Java Spring persistence knowledge.
 
 ## Prerequisites
@@ -16,7 +16,7 @@ Davide Nastri – d.nastri@gmail.com
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
-[Java Sprint Security Basics](https://github.com/ltpitt/java-spring-boot-persistence)
+[Java Spring Security Basics](https://github.com/ltpitt/java-spring-boot-persistence)
 
 ## Contributing
 
