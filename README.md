@@ -1,4 +1,5 @@
 [![build](https://github.com/ltpitt/java-spring-boot-persistence/workflows/build/badge.svg)](https://github.com/ltpitt/java-spring-boot-persistence/actions)
+[![CodeQL](https://github.com/ltpitt/java-spring-boot-persistence/workflows/CodeQL/badge.svg)](https://github.com/ltpitt/java-spring-boot-persistence/actions?query=workflow%3ACodeQL)
 [![GitHub Issues](https://img.shields.io/github/issues-raw/ltpitt/java-spring-boot-persistence)](https://github.com/ltpitt/java-spring-boot-persistence/issues)
 [![Total Commits](https://img.shields.io/github/last-commit/ltpitt/java-spring-boot-persistence)](https://github.com/ltpitt/java-spring-boot-persistence/commits)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/4w/ltpitt/java-spring-boot-persistence?foo=bar)](https://github.com/ltpitt/java-spring-boot-persistence/commits)
